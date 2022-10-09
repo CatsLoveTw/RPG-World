@@ -45,7 +45,7 @@ titleraws.build()
 
 // ----------
 /**
- * @param  {...any} message 輸入要報錯的自 
+ * @param  {...any} message  
  */
 export const warm = (...message) => {
     log(`§4§l>> §c錯誤 §f- §c${message}`)
