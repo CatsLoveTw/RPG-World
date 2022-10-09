@@ -1,7 +1,7 @@
 import { world } from "mojang-minecraft";
 import * as mc from "mojang-minecraft"
 import * as ui from "mojang-minecraft-ui";
-import {cmd, GetWorldPlayersName, log, logfor, logforTarget} from '../lib/GametestFunctions.js'
+import {cmd, log, logfor, logforTarget} from '../lib/GametestFunctions.js'
 import { getScore, isNum, randomInt, worldDB, worldlog } from '../lib/function.js'
 import { warm } from "../Main.js";
 import { titleraw } from "./titleraw.js";

@@ -1,6 +1,6 @@
 import { world, Player } from "mojang-minecraft";
 import * as ui from "mojang-minecraft-ui";
-import {cmd, GetWorldPlayersName, log, logfor} from '../lib/GametestFunctions.js'
+import {cmd, log, logfor} from '../lib/GametestFunctions.js'
 import { tpa } from './tpa.js'
 import { leaderboard } from "./leaderboard.js";
 import { worldlog, isNum, getScore } from '../lib/function.js'

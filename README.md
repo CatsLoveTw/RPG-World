@@ -1,12 +1,12 @@
 # RPG-World
-![version](https://img.shields.io/badge/Minecraft_Version-Bedrock_1.19.30+-brightgreen.svg)
+![version](https://img.shields.io/badge/Supported--Version-Bedrock--1.19.30%2B-yellow)
 
-> 本地圖所附帶的ScriptApi 手機電腦皆可使用
+> 本地圖所附帶的ScriptApi，手機電腦皆可使用
 ### 說明 / 聲明
 本專案/檔案為存放用，歡迎使用/修改專案\
 但**須遵守以下規則**:
 - 修改/轉載時請標註專案來源及作者
-- 此專案不得稱呼為自己的作品
+- 本地圖不得稱呼為自己的作品
 ### 未修復的問題
 - 無
 ### 預計更新

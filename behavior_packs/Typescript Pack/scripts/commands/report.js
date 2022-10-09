@@ -1,7 +1,7 @@
 import * as mc from "mojang-minecraft";
 import * as ui from "mojang-minecraft-ui";
 import { isNum, worldlog } from "../lib/function.js";
-import {cmd, GetWorldPlayersName, log, logfor} from '../lib/GametestFunctions.js'
+import {cmd, log, logfor} from '../lib/GametestFunctions.js'
 /*
   通用回復:
     收到後回覆:

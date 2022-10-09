@@ -2,7 +2,7 @@ import { Player, world } from "mojang-minecraft";
 import { EffectType } from "mojang-minecraft" // mc-script
 // import { Entityhit } from "mojang-minecraft"
 import * as ui from "mojang-minecraft-ui";
-import {cmd, GetWorldPlayersName, log, logfor} from '../lib/GametestFunctions.js';
+import {cmd, log, logfor} from '../lib/GametestFunctions.js';
 import { isNum, randomInt, worldlog, worldDB, getScore } from '../lib/function.js'
 import { playerUI } from './PlayerUI.js'
 import { adminUI } from './adminUI.js'
