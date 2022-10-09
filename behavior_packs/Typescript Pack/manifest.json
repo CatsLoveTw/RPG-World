@@ -1,0 +1,38 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "§6§lRPG§f用§6Gametest§f包",
+        "description": "§l作者:Cat1238756 §c請搭配專屬地圖使用",
+        "uuid": "b52a5b61-c9c8-4106-bd88-9fdd4f157bb8",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 17, 0]
+    },
+    "modules": [
+        {
+            "type": "data",
+            "uuid": "38cd257f-02e5-4d41-928f-0a484ac65746",
+            "version": [1, 0, 0]
+        },
+        {
+            "type": "script",
+            "language": "javascript",
+            "uuid": "b9634b5d-2f9b-4aaa-833c-733079c944ba",
+            "version": [1, 0, 0],
+            "entry": "scripts/Main.js"
+        }
+    ],
+    "dependencies": [
+        {
+            "module_name": "mojang-minecraft",
+            "version": "1.0.0-beta"
+        },
+        {
+            "module_name": "mojang-gametest",
+            "version": "1.0.0-beta"
+        },
+        {
+            "module_name": "mojang-minecraft-ui",
+            "version": "1.0.0-beta"
+        }
+    ]
+}
