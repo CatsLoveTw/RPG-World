@@ -1,5 +1,5 @@
-import { Player, world } from "mojang-minecraft";
-import * as ui from "mojang-minecraft-ui";
+import { Player, world } from "@minecraft/server";
+import * as ui from "@minecraft/server-ui";
 import { cmd, log, logfor } from '../lib/GametestFunctions.js'
 import { getScore, isNum, randomInt, worldlog } from '../lib/function.js'
 
@@ -20,7 +20,7 @@ export const runCommand = (message, player) => {
         let inv = player.getComponent('inventory')
         let sele = player.selectedSlot
         let item = inv.container.getItem(sele)
-        logfor(player.name, '§c§lNameTag §f- §b' + item.nameTag + ' §e§l物品id §f- §b' + item.id.replace("minecraft:", "") + ' §e§ldata值 §f- §b' + item.data + " §e§l數量§f - §b" + item.amount)
+        logfor(player.name, '§c§lNameTag §f- §b' + item.nameTag + ' §e§l物品id §f- §b' + item.typeId.replace("minecraft:", "") + ' §e§ldata值 §f- §b' + item.data + " §e§l數量§f - §b" + item.amount)
     } else {
         /**
          * @type {EntityInventoryComponent}
@@ -31,6 +31,6 @@ export const runCommand = (message, player) => {
             return logfor(player.name, '§c§l無效的位置!')
         }
         let item = inv.container.getItem(Number(slot))
-        logfor(player.name, '§c§lNameTag §f- §b' + item.nameTag + ' §e§l物品id §f- §b' + item.id.replace("minecraft:", "") + ' §e§ldata值 §f- §b' + item.data + " §e§l數量§f - §b" + item.amount)
+        logfor(player.name, '§c§lNameTag §f- §b' + item.nameTag + ' §e§l物品id §f- §b' + item.typeId.replace("minecraft:", "") + ' §e§ldata值 §f- §b' + item.data + " §e§l數量§f - §b" + item.amount)
     }
 }
