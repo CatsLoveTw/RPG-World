@@ -1,9 +1,8 @@
-import { world } from "mojang-minecraft";
-import * as ui from "mojang-minecraft-ui";
+import { world } from "@minecraft/server";
+import * as ui from "@minecraft/server-ui";
 import {cmd, log, logfor} from '../lib/GametestFunctions.js'
 import { getScore, isNum, randomInt } from '../lib/function.js'
 import { worldlog } from '../lib/function.js'
-import { tpa } from './tpa.js'
 
 import { changeMaxLevel } from './level.js'
 
