@@ -1,5 +1,5 @@
-import { world } from "mojang-minecraft"
-import * as mc from "mojang-minecraft"
+import { world } from "@minecraft/server"
+import * as mc from "@minecraft/server"
 import { cmd, log, logfor } from './GametestFunctions.js'
 import { leaderboard } from '../commands/leaderboard.js'
 import { getlevel } from '../commands/level.js'

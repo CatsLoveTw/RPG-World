@@ -1,4 +1,4 @@
-import * as mc from "mojang-minecraft";
+import * as mc from "@minecraft/server";
 
 const cmd = function(command) {
     return mc.world.getDimension("overworld").runCommand(command).statusMessage

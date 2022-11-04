@@ -1,6 +1,6 @@
-import { world } from "mojang-minecraft";
-import * as mc from "mojang-minecraft"
-import * as ui from "mojang-minecraft-ui";
+import { world } from "@minecraft/server";
+import * as mc from "@minecraft/server"
+import * as ui from "@minecraft/server-ui";
 import {cmd, log, logfor, logforTarget} from '../lib/GametestFunctions.js'
 import { getScore, isNum, randomInt, worldDB, worldlog } from '../lib/function.js'
 import { warm } from "../Main.js";
@@ -33,7 +33,7 @@ export const getDamage = (playerClass, damage) => {
     }
     try {
         let item = playerClass.getComponent("inventory").container.getItem(playerClass.selectedSlot)
-        if (item.id == "minecraft:bow" || item.id == "minecraft:crossbow") {
+        if (item.typeId == "minecraft:bow" || item.typeId == "minecraft:crossbow") {
             damage = Math.trunc(damage)
         }
             if (item.getLore()[0].includes("- §e")) {
@@ -172,17 +172,14 @@ export const build = () => {
                             for (let entity of world.getDimension("overworld").getEntities()) {
                                 if (entity.id != "minecraft:player" && entity.id != "minecraft:item") {
                                     if (entity.location.isNear(locs, 2)) {
-                                        // log(entity.id)
                                         en.push(entity)
                                     }
                                 }
                             }
 
-                            if (sLocation.x > 20 || sLocation.z > 20 || sLocation.y > 20 || bl.id != "minecraft:air" || en.length >= 1) {
-                                // log(`${sLocation.x}, ${sLocation.y}, ${sLocation.z}, ${bl.id}, ${en}`)
+                            if (sLocation.x > 20 || sLocation.z > 20 || sLocation.y > 20 || bl.typeId != "minecraft:air" || en.length >= 1) {
                                 if (en.length >= 1) {
                                     for (let e of en) {
-                                        // log(e.id)
                                         try {
                                             let player = loc[4]
                                             // let c = mc.EntityQueryOption
@@ -294,8 +291,8 @@ export const build = () => {
                     run = false
                 }
                 let block = world.getDimension("overworld").getBlock(new mc.BlockLocation(Math.trunc(entity.location.x), Math.trunc(entity.location.y - i), Math.trunc(entity.location.z)))
-                // log(block.id)
-                if (block.id != "minecraft:air") {
+                // log(block.typeId)
+                if (block.typeId != "minecraft:air") {
                     run = false
                 }
             }
@@ -372,7 +369,7 @@ export const build = () => {
         if (entity.id == "minecraft:player") {
             try {
             let item = entity.getComponent("inventory").container.getItem(entity.selectedSlot)
-            if (item.id == "minecraft:bow" || item.id == "minecraft:crossbow") {
+            if (item.typeId == "minecraft:bow" || item.typeId == "minecraft:crossbow") {
                 damage = Math.trunc(damage)
             }
                 if (item.getLore()[0].includes("- §e")) {
@@ -490,7 +487,7 @@ export const SettingMenu = (player) => {
                     if (Item.nameTag) {
                         name = Item.nameTag
                     }
-                    let id = Item.id
+                    let id = Item.typeId
                     let damage = 1
                     try {
                         if (Item.getLore()[0].includes("§c§l傷害 §f- ")) {
