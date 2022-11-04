@@ -1,5 +1,5 @@
 # RPG-World
-![version](https://img.shields.io/badge/Supported--Version-Bedrock--1.19.30%2B-yellow)
+![version](https://img.shields.io/badge/Supported--Version-Bedrock--1.19.41+-yellow)
 
 > 本地圖所附帶的ScriptApi，手機電腦皆可使用
 ### 說明 / 聲明
