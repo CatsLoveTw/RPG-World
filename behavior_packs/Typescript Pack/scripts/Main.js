@@ -72,6 +72,7 @@ let test = 0
 world.events.tick.subscribe(() => {
     try {
     cmd(`effect @e[type=!player] resistance 25 255 true`)
+    cmd(`effect @e[type=!player] fire_resistance 25 255 true`)
     } catch {}
     cmd(`effect @a health_boost 3 4 true`)
     cmd(`effect @a regeneration 3 255 true`)
