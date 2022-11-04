@@ -1,5 +1,5 @@
-import { Player, world } from "mojang-minecraft";
-import * as ui from "mojang-minecraft-ui";
+import { Player, world } from "@minecraft/server";
+import * as ui from "@minecraft/server-ui";
 import { cmd, log, logfor } from '../lib/GametestFunctions.js'
 import { getScore, isNum, randomInt, worldlog } from '../lib/function.js'
 
