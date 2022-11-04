@@ -1,5 +1,5 @@
-import { Player, world, BlockLocation } from "mojang-minecraft";
-import * as ui from "mojang-minecraft-ui";
+import { Player, world, BlockLocation } from "@minecraft/server";
+import * as ui from "@minecraft/server-ui";
 import { cmd, log, logfor } from '../lib/GametestFunctions.js'
 import { getScore, isNum, randomInt, worldlog } from '../lib/function.js'
 import { warm } from "../Main.js";
@@ -37,8 +37,8 @@ export const runCommand = (message, player) => {
                         try {
                             let loc = new BlockLocation(x, y, z)
                             let block = world.getDimension("overworld").getBlock(loc)
-                            if (block.id != 'minecraft:air') {
-                                text.push(`§b§l找到方塊 §e${block.id.replace("minecraft:", "")} §7(§6${x} ${y} ${z}§7)\n`)
+                            if (block.typeId != 'minecraft:air') {
+                                text.push(`§b§l找到方塊 §e${block.typeId.replace("minecraft:", "")} §7(§6${x} ${y} ${z}§7)\n`)
                                 i++
                             }
                         } catch (e) {warm(e)}
