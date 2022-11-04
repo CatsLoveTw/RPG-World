@@ -1,7 +1,7 @@
-import { world } from "mojang-minecraft";
-import * as ui from "mojang-minecraft-ui";
-import {cmd, log, logfor} from '../lib/GametestFunctions.js'
-import { isNum, randomInt } from '../lib/function.js'
+import { world } from "@minecraft/server";
+import * as ui from "@minecraft/server-ui";
+import {cmd, log, logfor} from '../../lib/GametestFunctions.js'
+import { isNum, randomInt } from '../../lib/function.js'
 
 // | 或 §
 

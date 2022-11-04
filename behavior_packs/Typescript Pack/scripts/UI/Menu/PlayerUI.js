@@ -1,12 +1,11 @@
-import { world, Player } from "mojang-minecraft";
-import * as ui from "mojang-minecraft-ui";
-import {cmd, log, logfor} from '../lib/GametestFunctions.js'
-import { tpa } from './tpa.js'
-import { leaderboard } from "./leaderboard.js";
-import { worldlog, isNum, getScore } from '../lib/function.js'
-import { ChatTags } from "./chatTags.js";
-import { server } from './serverMenu.js'
-import { reportMenu } from "./report.js";
+import { world, Player } from "@minecraft/server";
+import * as ui from "@minecraft/server-ui";
+import {cmd, log, logfor} from '../../lib/GametestFunctions.js'
+import { leaderboard } from "../../commands/leaderboard.js";
+import { worldlog, isNum, getScore } from '../../lib/function.js'
+import { ChatTags } from "../../commands/chatTags.js";
+import { server } from '../SubMenu/serverMenu.js'
+import { reportMenu } from "../SubMenu/report.js";
 /**
  * 
  * @param {Player} player 

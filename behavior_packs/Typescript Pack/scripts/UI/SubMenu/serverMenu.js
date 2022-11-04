@@ -1,10 +1,10 @@
-import { world } from "mojang-minecraft";
-import * as ui from "mojang-minecraft-ui";
-import {cmd, log, logfor} from '../lib/GametestFunctions.js'
-import { getScore, isNum, randomInt } from '../lib/function.js'
-import { worldlog } from '../lib/function.js'
-import { leaderboard } from './leaderboard.js'
-import { updateMenu } from "./update.js";
+import { world } from "@minecraft/server";
+import * as ui from "@minecraft/server-ui";
+import {cmd, log, logfor} from '../../lib/GametestFunctions.js'
+import { getScore, isNum, randomInt } from '../../lib/function.js'
+import { worldlog } from '../../lib/function.js'
+import { leaderboard } from '../../commands/leaderboard.js'
+import { updateMenu } from "../../commands/update.js";
 
 export const server = (player) => {
     new ui.ActionFormData()

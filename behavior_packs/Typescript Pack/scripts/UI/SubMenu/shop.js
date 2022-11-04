@@ -1,17 +1,15 @@
-import { Player, world } from "mojang-minecraft";
-import { EffectType } from "mojang-minecraft" // mc-script
-// import { Entityhit } from "mojang-minecraft"
-import * as ui from "mojang-minecraft-ui";
-import {cmd, log, logfor} from '../lib/GametestFunctions.js';
-import { isNum, randomInt, worldlog, worldDB, getScore } from '../lib/function.js'
-import { playerUI } from './PlayerUI.js'
-import { adminUI } from './adminUI.js'
-import { jointext } from './jointext.js'
-import { sendchat, chatCommands } from './Chat.js'
-import { titleraw } from './titleraw.js'
-import { cheakafk, updateafk } from './cheakafk.js'
-import { leaderboard } from './leaderboard.js'
-import { cheakPlayerXPMax, updatelevel } from './level.js'
+import { Player, world } from "@minecraft/server";
+import { EffectType } from "@minecraft/server" // mc-script
+// import { Entityhit } from "@minecraft/server"
+import * as ui from "@minecraft/server-ui";
+import {cmd, log, logfor} from '../../lib/GametestFunctions.js';
+import { isNum, randomInt, worldlog, worldDB, getScore } from '../../lib/function.js'
+import { jointext } from '../../commands/jointext.js'
+import { sendchat, chatCommands } from '../../commands/Chat.js'
+import { titleraw } from '../../commands/titleraw.js'
+import { cheakafk, updateafk } from '../../commands/cheakafk.js'
+import { leaderboard } from '../../commands/leaderboard.js'
+import { cheakPlayerXPMax, updatelevel } from '../../commands/level.js'
 
 // | 或 §
 class SetButton {

@@ -1,8 +1,8 @@
-import { world } from "mojang-minecraft";
-import * as mc from "mojang-minecraft"
-import * as ui from "mojang-minecraft-ui";
-import { cmd, log, logfor } from '../lib/GametestFunctions.js'
-import { getScore, isNum, randomInt, worldlog } from '../lib/function.js'
+import { world } from "@minecraft/server";
+import * as mc from "@minecraft/server"
+import * as ui from "@minecraft/server-ui";
+import { cmd, log, logfor } from '../../lib/GametestFunctions.js'
+import { getScore, isNum, randomInt, worldlog } from '../../lib/function.js'
 
 export const sign = (playerClass) => {
     /**
