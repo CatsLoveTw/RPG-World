@@ -1,12 +1,12 @@
 
-import { Player, world, ItemStack, MinecraftItemTypes,EntityInventoryComponent ,ItemType, BlockLocation, MinecraftBlockTypes } from "mojang-minecraft";
-import * as mc from "mojang-minecraft" // mc-script
-// import { Entityhit } from "mojang-minecraft"
-import * as ui from "mojang-minecraft-ui";
+import { Player, world, ItemStack, MinecraftItemTypes,EntityInventoryComponent ,ItemType, BlockLocation, MinecraftBlockTypes } from "@minecraft/server";
+import * as mc from "@minecraft/server" // mc-script
+// import { Entityhit } from "@minecraft/server"
+import * as ui from "@minecraft/server-ui";
 import {cmd, log, logfor, titlefor} from './lib/GametestFunctions.js';
 import { isNum, randomInt, worldlog, worldDB } from './lib/function.js'
-import { playerUI } from './commands/PlayerUI.js'
-import { adminUI } from './commands/adminUI.js'
+import { playerUI } from './UI/Menu/PlayerUI.js'
+import { adminUI } from './UI/Menu/adminUI.js'
 import { jointext } from './commands/jointext.js'
 import { sendchat, chatCommands } from './commands/Chat.js'
 import { titleraw } from './commands/titleraw.js'
@@ -14,7 +14,7 @@ import * as titleraws from './commands/titleraw.js'
 import { cheakafk, updateafk } from './commands/cheakafk.js'
 import { leaderboard } from './commands/leaderboard.js'
 import { ban } from './commands/ban.js'
-import { sign } from './commands/sign.js'
+import { sign } from './UI/SubMenu/sign.js'
 import * as pveData from './commands/pveData.js'
 import * as level from './commands/level.js'
 // | 或 §
@@ -161,8 +161,7 @@ world.events.tick.subscribe(() => {
 world.events.beforeItemUse.subscribe(eventData => {
     let player = eventData.source;
     let item = eventData.item
-
-    if (item.id == "minecraft:lodestone_compass" && item.nameTag == "§e§lmenu" && item.getLore()[0] == "§f§l點擊§a右鍵§f/長按§a螢幕§f即可§e開啟選單") {
+    if (item.typeId == "minecraft:lodestone_compass" && item.nameTag == "§e§lmenu" && item.getLore()[0] == "§f§l點擊§a右鍵§f/長按§a螢幕§f即可§e開啟選單") {
         if (UI) {
             eventData.cancel = true
    
