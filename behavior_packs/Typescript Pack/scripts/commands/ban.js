@@ -1,8 +1,7 @@
-import { world } from "mojang-minecraft";
-import * as ui from "mojang-minecraft-ui";
+import { world } from "@minecraft/server";
+import * as ui from "@minecraft/server-ui";
 import {cmd, log, logfor} from '../lib/GametestFunctions.js'
 import { getScore, isNum, randomInt, worldlog } from '../lib/function.js'
-import { tpa } from './tpa.js'
 
 // | 或 §
 
@@ -30,9 +29,9 @@ export function ban () {
         for (let i=0; i < 36; i++) {
             try {
                 for (let item of banitem) {
-                    if (warringItem.includes(plainv.container.getItem(i).id) && !player.hasTag("admin")) {
-                        log(`§3§l>> §c偵測到 §f${player.name} §c的背包擁有 §f${plainv.container.getItem(i).id} §c已清除!`)
-                        player.runCommand(`clear @s ${plainv.container.getItem(i).id}`)
+                    if (warringItem.includes(plainv.container.getItem(i).typeId) && !player.hasTag("admin")) {
+                        log(`§3§l>> §c偵測到 §f${player.name} §c的背包擁有 §f${plainv.container.getItem(i).typeId} §c已清除!`)
+                        player.runCommand(`clear @s ${plainv.container.getItem(i).typeId}`)
                         for (let name of warringItemName) {
                             try {
                                 cmd(`kill @e[name="${name}",type=item]`)
@@ -42,8 +41,8 @@ export function ban () {
                             }
                         }
                     }
-                    if (plainv.container.getItem(i).id == item && !player.hasTag("admin")) {
-                        hackitem.push(plainv.container.getItem(i).id)
+                    if (plainv.container.getItem(i).typeId == item && !player.hasTag("admin")) {
+                        hackitem.push(plainv.container.getItem(i).typeId)
                         hack = true
                  }
             }
